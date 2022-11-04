@@ -1,0 +1,126 @@
+// @import "fonts";
+@import "libs";
+@import "vars";
+@import "global";
+@import "media";
+
+/////////////////
+
+// Folder group
+.folder {
+  @include border-b;
+  background: $white;
+  width: 100%;
+  max-width: 968px;
+  margin: 0 auto;
+}
+
+.top-folder {
+  padding: 40px 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.customers {
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 33px;
+    margin-bottom: 7px;
+  }
+  .members {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: $light-green;
+  }
+}
+.search-container {
+  form {
+    @include border-l;
+    display: flex;
+    align-items: center;
+    background: $light-gray2;
+    overflow: hidden;
+    width: 216px;
+  }
+}
+.btn-search {
+  padding: 10px 0 10px 8px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: $second-gray;
+  outline: none;
+  i {
+    width: 16px;
+    height: 18px;
+  }
+  &:focus-visible {
+    i {
+      border: 1px solid $violet;
+    }
+  }
+}
+.searchTerm {
+  @include border-l;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 10px 10px 12px;
+  color: $light-gray3;
+  background: $light-gray2;
+  border: 0;
+  outline: none;
+}
+
+// Table
+.holder-table {
+  padding: 30px 40px 40px 40px;
+  position: relative;
+  overflow: hidden;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-weight: 500;
+  th,
+  td {
+    padding: 20px 0;
+  }
+  tr th:last-child,
+  tr td:last-child {
+    text-align: center;
+  }
+}
+thead tr {
+  text-align: left;
+  th {
+    color: $light-gray3;
+    font-weight: 500;
+  }
+}
+thead,
+tbody,
+tr {
+  position: relative;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 1px solid $very-light-gray;
+  }
+}
+thead,
+tbody {
+  &::before {
+    transform: translateX(-100px);
+  }
+  &::after {
+    transform: translateX(100px);
+  }
+}

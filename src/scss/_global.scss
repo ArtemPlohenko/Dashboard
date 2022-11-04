@@ -1,0 +1,86 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background: $light-gray;
+  letter-spacing: -0.01em;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+///////////////////////////////
+
+// Border-radius
+@mixin border-b {
+  border-radius: 30px;
+}
+@mixin border-l {
+  border-radius: 10px;
+}
+@mixin border-s {
+  border-radius: 8px;
+}
+@mixin border-m {
+  border-radius: 4px;
+}
+
+// Buttons
+.btn {
+  padding: 12px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+// Types buttons
+.btn-norm {
+  @include border-m;
+  //   padding: 4px 12px;
+  padding: 3px 13px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  max-width: 80px;
+  width: 100%;
+}
+.btn-small {
+  @include border-m;
+  //   padding: 6px 9px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: $dark;
+  background: $bg-gray;
+  border: 1px solid $very-light-gray;
+  transition: all 0.4s;
+  &:hover {
+    color: $white;
+    background: $violet;
+    border: 1px solid $violet;
+  }
+}
+
+.b-active {
+  color: $green;
+  background: rgba($green, 0.38);
+  border: 1px solid $green;
+}
+.b-inactive {
+  color: $red;
+  background: $light-red;
+  border: 1px solid $red;
+}
