@@ -4,7 +4,40 @@
 @import "global";
 @import "media";
 
-/////////////////
+///////////////////////
+
+// Sidebar__title
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 20%;
+  padding: 35px 30px;
+  min-width: 306px;
+  background: $white;
+  box-shadow: 0px 10px 60px rgba($light-dark, 50%);
+  &__title {
+    width: 100%;
+    max-width: 246px;
+    display: flex;
+    align-items: center;
+    line-height: 39px;
+    padding-right: 5px;
+    position: relative;
+    h2 {
+      margin-left: 5px;
+      letter-spacing: 1.8px;
+    }
+    .number-version {
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 15px;
+      color: $small-text-gray;
+      position: absolute;
+      bottom: 5px;
+      right: 31px;
+    }
+  }
+}
 
 // Folder group
 .folder {
@@ -13,10 +46,23 @@
   width: 100%;
   max-width: 968px;
   margin: 0 auto;
+  box-shadow: 0px 10px 60px rgba($light-dark, 50%);
+}
+
+.title h1 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  width: 100%;
+  max-width: 968px;
+  margin: 0 auto 50px;
+  .customers-name {
+    display: inline-block;
+  }
 }
 
 .top-folder {
-  padding: 40px 40px 0;
+  padding: 32px 35px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -36,6 +82,8 @@
 }
 .search-container {
   form {
+    margin-top: 14px;
+    margin-right: 21px;
     @include border-l;
     display: flex;
     align-items: center;
@@ -45,15 +93,20 @@
   }
 }
 .btn-search {
-  padding: 10px 0 10px 8px;
+  padding: 7px 0 7px 10px;
   border: 0;
   background: transparent;
   cursor: pointer;
   color: $second-gray;
   outline: none;
+  transition: all 0.4s;
+  &:hover {
+    i {
+      color: $black;
+    }
+  }
   i {
-    width: 16px;
-    height: 18px;
+    font-size: 22px;
   }
   &:focus-visible {
     i {
@@ -67,15 +120,17 @@
   font-weight: 400;
   line-height: 18px;
   padding: 10px 10px 12px;
-  color: $light-gray3;
   background: $light-gray2;
   border: 0;
   outline: none;
+  &::placeholder {
+    color: $light-gray3;
+  }
 }
 
 // Table
 .holder-table {
-  padding: 30px 40px 40px 40px;
+  padding: 22px 35px 0;
   position: relative;
   overflow: hidden;
 }
@@ -122,5 +177,41 @@ tbody {
   }
   &::after {
     transform: translateX(100px);
+  }
+}
+
+.bottom-folder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 43px 40px 35px;
+
+  .data-info {
+    color: $light-gray3;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+  }
+  .pagination {
+    display: flex;
+    align-items: center;
+    li {
+      font-size: 12px;
+      border: 0;
+      margin: 0 6px;
+      padding: 0;
+      &:first-child {
+        padding: 0;
+      }
+      &:last-child {
+        margin: 0 0 0 7px;
+        padding: 0;
+      }
+    }
+    .dots {
+      width: 10px;
+      margin: 0 4px;
+      color: $dark;
+    }
   }
 }
