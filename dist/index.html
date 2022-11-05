@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;500;600&display=swap&_v=20221105203557"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?_v=20221105203557"
+  />
+  <link rel="stylesheet" href="css/style.min.css?_v=20221105203557" />
+  <title>Головна сторінка</title>
+</head>
+
+  <body>
+    <header>
+  <!-- <img src="img/logo.svg" alt="" /> -->
+  <!-- I am Header! -->
+</header>
+
+    <main>
+      <!-- <button class="btn btn-small">1</button>
+      <button class="btn btn-small">2</button>
+      <button class="btn btn-small">3</button> -->
+      <div class="wrapper">
+        <div class="sidebar">
+          <div class="sidebar__title">
+            <img src="./img/svg/setting.svg" alt="Image Discount" />
+            <h2>Dashboard</h2>
+            <span class="number-version">v.01</span>
+          </div>
+        </div>
+        <div class="container">
+          <!-- ///////////// -->
+          <!-- ///////////// -->
+          <div class="title">
+            <h1>Hello <span class="customers-name">Evano</span> 👋🏼,</h1>
+          </div>
+          <div class="folder">
+            <div class="top-folder">
+              <div class="customers">
+                <h2>All Customers</h2>
+                <div class="members">Active Members</div>
+              </div>
+              <div class="search-container">
+                <form>
+                  <button class="btn-search" type="submit">
+                    <i class="fa fa-search"></i>
+                  </button>
+                  <input
+                    type="text"
+                    class="searchTerm"
+                    placeholder="Search"
+                    name="search"
+                  />
+                </form>
+              </div>
+            </div>
+            <div class="holder-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Customer Name</th>
+                    <th>Company</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Country</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Jane Cooper</td>
+                    <td>Microsoft</td>
+                    <td>(225) 555-0118</td>
+                    <td>jane@microsoft.com</td>
+                    <td>United States</td>
+                    <td>
+                      <button class="btn btn-norm b-active">Active</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Floyd Miles</td>
+                    <td>Yahoo</td>
+                    <td>(205) 555-0100</td>
+                    <td>floyd@yahoo.com</td>
+                    <td>Kiribati</td>
+                    <td>
+                      <button class="btn btn-norm b-inactive">Inactive</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Ronald Richards</td>
+                    <td>Adobe</td>
+                    <td>(302) 555-0107</td>
+                    <td>ronald@adobe.com</td>
+                    <td>Israel</td>
+                    <td>
+                      <button class="btn btn-norm b-inactive">Inactive</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Marvin McKinney</td>
+                    <td>Tesla</td>
+                    <td>(252) 555-0126</td>
+                    <td>marvin@tesla.com</td>
+                    <td>Iran</td>
+                    <td>
+                      <button class="btn btn-norm b-active">Active</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Jerome Bell</td>
+                    <td>Google</td>
+                    <td>(629) 555-0129</td>
+                    <td>jerome@google.com</td>
+                    <td>Réunion</td>
+                    <td>
+                      <button class="btn btn-norm b-active">Active</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Kathryn Murphy</td>
+                    <td>Microsoft</td>
+                    <td>(406) 555-0120</td>
+                    <td>kathryn@microsoft.com</td>
+                    <td>Curaçao</td>
+                    <td>
+                      <button class="btn btn-norm b-active">Active</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Jacob Jones</td>
+                    <td>Yahoo</td>
+                    <td>(208) 555-0112</td>
+                    <td>jacob@yahoo.com</td>
+                    <td>Brazil</td>
+                    <td>
+                      <button class="btn btn-norm b-active">Active</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Kristin Watson</td>
+                    <td>Facebook</td>
+                    <td>(704) 555-0127</td>
+                    <td>kristin@facebook.com</td>
+                    <td>Åland Islands</td>
+                    <td>
+                      <button class="btn btn-norm b-inactive">Inactive</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bottom-folder">
+              <div class="data-info">
+                <p>
+                  Showing data 1 to 8 of
+                  <span class="entrie">256K</span> entries
+                </p>
+              </div>
+              <ul class="pagination">
+                <li>
+                  <a href="#">&laquo;</a>
+                </li>
+                <li>
+                  <a class="b-number active" href="#">1</a>
+                </li>
+                <li>
+                  <a class="b-number" href="#">2</a>
+                </li>
+                <li>
+                  <a class="b-number" href="#">3</a>
+                </li>
+                <li>
+                  <a class="b-number" href="#">4</a>
+                </li>
+                <li class="dots">
+                  <span>...</span>
+                </li>
+                <li>
+                  <a class="b-number" href="#">40</a>
+                </li>
+                <li>
+                  <a href="#">&raquo;</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script src="js/app.min.js?_v=20221105203557"></script>
+  </body>
+</html>
