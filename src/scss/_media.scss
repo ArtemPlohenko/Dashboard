@@ -1,4 +1,114 @@
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .side-foldr,
+  .sidebar {
+    min-width: 230px;
+  }
+  .sidebar {
+    padding: 20px 20px 35px;
+    h2 {
+      font-size: 20px;
+      line-height: 33px;
+      letter-spacing: normal;
+    }
+    .number-version {
+      right: 15px;
+    }
+  }
+  .container {
+    padding: 20px;
+  }
+
+  .top-folder {
+    padding: 20px 20px 0;
+  }
+  .holder-table {
+    padding: 20px 20px 0;
+  }
+  .bottom-folder {
+    padding: 20px;
+  }
+
+  // Table
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    // overflow: hidden;
+    // position: absolute;
+    // width: 1px;
+  }
+  table tr {
+    display: block;
+  }
+  table td {
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .side-foldr,
+  .sidebar {
+    min-width: 306px;
+  }
+  .sidebar {
+    padding: 35px 28px 75px;
+    h2 {
+      font-size: 26px;
+      line-height: 39px;
+      letter-spacing: 1.8px;
+    }
+    .number-version {
+      right: 21px;
+    }
+  }
+  .container {
+    padding: 40px 30px;
+  }
+
+  .top-folder {
+    padding: 32px 35px 0;
+  }
+  .holder-table {
+    padding: 22px 35px 0;
+  }
+  .bottom-folder {
+    padding: 25px 43px 40px 35px;
+  }
+
+  // Table
+  table thead {
+    position: relative;
+  }
+  table tr {
+    display: table-row;
+  }
+  table td {
+    display: table-cell;
+    font-size: inherit;
+    text-align: inherit;
+  }
+  table td::before {
+    content: attr(data-label);
+    float: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 }
 
 @media (max-width: 1024px) {

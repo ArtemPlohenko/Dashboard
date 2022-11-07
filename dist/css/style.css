@@ -3480,10 +3480,13 @@ a {
   text-decoration: none;
 }
 
+.wrapper {
+  display: table;
+}
+
 .container {
-  max-width: 1440px;
-  padding: 40px 30px;
-  margin-left: 20%;
+  display: table-cell;
+  width: 100%;
   margin-right: auto;
 }
 
@@ -3554,28 +3557,132 @@ a {
   border: 1px solid #df0404;
 }
 
+@media (min-width: 768px) {
+  .side-foldr,
+.sidebar {
+    min-width: 230px;
+  }
+  .sidebar {
+    padding: 20px 20px 35px;
+  }
+  .sidebar h2 {
+    font-size: 20px;
+    line-height: 33px;
+    letter-spacing: normal;
+  }
+  .sidebar .number-version {
+    right: 15px;
+  }
+  .container {
+    padding: 20px;
+  }
+  .top-folder {
+    padding: 20px 20px 0;
+  }
+  .holder-table {
+    padding: 20px 20px 0;
+  }
+  .bottom-folder {
+    padding: 20px;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  table tr {
+    display: block;
+  }
+  table td {
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .side-foldr,
+.sidebar {
+    min-width: 306px;
+  }
+  .sidebar {
+    padding: 35px 28px 75px;
+  }
+  .sidebar h2 {
+    font-size: 26px;
+    line-height: 39px;
+    letter-spacing: 1.8px;
+  }
+  .sidebar .number-version {
+    right: 21px;
+  }
+  .container {
+    padding: 40px 30px;
+  }
+  .top-folder {
+    padding: 32px 35px 0;
+  }
+  .holder-table {
+    padding: 22px 35px 0;
+  }
+  .bottom-folder {
+    padding: 25px 43px 40px 35px;
+  }
+  table thead {
+    position: relative;
+  }
+  table tr {
+    display: table-row;
+  }
+  table td {
+    display: table-cell;
+    font-size: inherit;
+    text-align: inherit;
+  }
+  table td::before {
+    content: attr(data-label);
+    float: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+.side-foldr {
+  display: table-cell;
+}
+
 .sidebar {
   position: fixed;
+  display: table-cell;
   height: 100%;
   width: 20%;
-  padding: 35px 28px 75px;
-  min-width: 306px;
   background: #ffffff;
   box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+  z-index: 2;
 }
 .sidebar__title {
   width: 100%;
   max-width: 246px;
   display: flex;
   align-items: center;
-  line-height: 39px;
   padding-right: 5px;
   position: relative;
   margin-bottom: 50px;
 }
 .sidebar__title h2 {
   margin-left: 5px;
-  letter-spacing: 1.8px;
 }
 .sidebar__title .number-version {
   font-size: 10px;
@@ -3584,7 +3691,6 @@ a {
   color: #838383;
   position: absolute;
   bottom: 5px;
-  right: 31px;
 }
 
 .sidebar__folder {
@@ -3598,6 +3704,7 @@ a {
   margin-bottom: 17px;
 }
 .sidebar__nav .btn {
+  border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3608,17 +3715,18 @@ a {
   padding: 12px 0px 12px 9px;
 }
 .sidebar__nav .btn:hover {
-  border-radius: 8px;
   color: #ffffff;
   background: #5932ea;
   opacity: 1;
+}
+.sidebar__nav .btn:hover svg path {
+  fill: #ffffff;
 }
 .sidebar__nav .btn div {
   display: flex;
   align-items: center;
 }
-.sidebar__nav .btn img {
-  fill: red;
+.sidebar__nav .btn svg {
   margin-right: 14px;
 }
 
@@ -3666,7 +3774,6 @@ a {
 }
 
 .top-folder {
-  padding: 32px 35px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -3729,7 +3836,6 @@ a {
 }
 
 .holder-table {
-  padding: 22px 35px 0;
   position: relative;
   overflow: hidden;
 }
@@ -3789,7 +3895,6 @@ tbody::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 43px 40px 35px;
 }
 .bottom-folder .data-info {
   color: #b5b7c0;
