@@ -40,6 +40,12 @@
   .customer-info {
     margin-bottom: 75px;
   }
+  table {
+    td,
+    th {
+      padding: 20px 0;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -62,6 +68,12 @@
   }
   .customer-info {
     margin-bottom: 20px;
+  }
+  table {
+    td,
+    th {
+      padding: 8px 0;
+    }
   }
 }
 
