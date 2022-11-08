@@ -3740,7 +3740,7 @@ a {
   opacity: 1;
 }
 .sidebar__nav .btn:hover svg path {
-  fill: #ffffff;
+  stroke: #ffffff;
 }
 .sidebar__nav .btn div {
   display: flex;

@@ -10,7 +10,6 @@
   display: table-cell;
   height: 100%;
   width: 20%;
-  // padding: 35px 28px 75px;
   background: $white;
   box-shadow: 0px 10px 60px rgba($light-dark, 50%);
   z-index: 2;
@@ -67,8 +66,8 @@
       opacity: 1;
       svg {
         path {
-          // stroke: $white;
-          fill: $white;
+          stroke: $white;
+          // fill: $white;
         }
       }
     }
